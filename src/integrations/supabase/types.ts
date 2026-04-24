@@ -14,7 +14,99 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      profiles: {
+        Row: {
+          avatar_url: string | null
+          created_at: string
+          display_name: string | null
+          id: string
+          updated_at: string
+        }
+        Insert: {
+          avatar_url?: string | null
+          created_at?: string
+          display_name?: string | null
+          id: string
+          updated_at?: string
+        }
+        Update: {
+          avatar_url?: string | null
+          created_at?: string
+          display_name?: string | null
+          id?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      user_settings: {
+        Row: {
+          brush_settings: Json
+          gesture_mappings: Json
+          smart_ink_mode: string
+          smoothing: Json
+          theme: string
+          ui_layout: Json
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          brush_settings?: Json
+          gesture_mappings?: Json
+          smart_ink_mode?: string
+          smoothing?: Json
+          theme?: string
+          ui_layout?: Json
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          brush_settings?: Json
+          gesture_mappings?: Json
+          smart_ink_mode?: string
+          smoothing?: Json
+          theme?: string
+          ui_layout?: Json
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      whiteboards: {
+        Row: {
+          created_at: string
+          data: Json
+          id: string
+          is_public: boolean
+          share_token: string | null
+          thumbnail_url: string | null
+          title: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          data?: Json
+          id?: string
+          is_public?: boolean
+          share_token?: string | null
+          thumbnail_url?: string | null
+          title?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          data?: Json
+          id?: string
+          is_public?: boolean
+          share_token?: string | null
+          thumbnail_url?: string | null
+          title?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
