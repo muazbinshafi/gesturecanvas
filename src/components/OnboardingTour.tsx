@@ -31,14 +31,10 @@ export function OnboardingTour() {
       showProgress
       callback={cb}
       styles={{
-        options: {
-          primaryColor: "hsl(265 89% 70%)",
-          backgroundColor: "hsl(230 24% 10%)",
-          arrowColor: "hsl(230 24% 10%)",
-          textColor: "hsl(210 40% 98%)",
-          overlayColor: "hsla(230, 50%, 2%, 0.7)",
-          zIndex: 100,
-        },
+        tooltip: { backgroundColor: "hsl(230 24% 10%)", color: "hsl(210 40% 98%)", borderRadius: 12 },
+        buttonNext: { backgroundColor: "hsl(265 89% 70%)", color: "hsl(230 25% 7%)" },
+        buttonBack: { color: "hsl(210 40% 98%)" },
+        buttonSkip: { color: "hsl(215 20% 65%)" },
       }}
     />
   );
