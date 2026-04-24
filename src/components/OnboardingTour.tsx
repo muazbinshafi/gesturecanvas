@@ -30,12 +30,9 @@ export function OnboardingTour() {
       showSkipButton
       showProgress
       callback={cb}
-      styles={{
-        tooltip: { backgroundColor: "hsl(230 24% 10%)", color: "hsl(210 40% 98%)", borderRadius: 12 },
-        buttonNext: { backgroundColor: "hsl(265 89% 70%)", color: "hsl(230 25% 7%)" },
-        buttonBack: { color: "hsl(210 40% 98%)" },
-        buttonSkip: { color: "hsl(215 20% 65%)" },
-      }}
+    />
+  );
+}
     />
   );
 }
