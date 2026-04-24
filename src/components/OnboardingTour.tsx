@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Joyride, { type CallBackProps, STATUS, type Step } from "react-joyride";
+import { Joyride, STATUS, type Step } from "react-joyride";
 
 const STEPS: Step[] = [
   { target: "body", placement: "center", content: "Welcome to Gesture Whiteboard! Let me show you around in 30 seconds." },
@@ -17,7 +17,7 @@ export function OnboardingTour() {
     if (!done) setTimeout(() => setRun(true), 600);
   }, []);
 
-  function cb(d: CallBackProps) {
+  function cb(d: { status: string }) {
     const finished = ([STATUS.FINISHED, STATUS.SKIPPED] as string[]).includes(d.status);
     if (finished) { localStorage.setItem("onboarding_done", "1"); setRun(false); }
   }
